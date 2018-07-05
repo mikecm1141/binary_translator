@@ -53,4 +53,12 @@ class BinaryTranslatorTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_it_ignores_non_letter_characters
+    bt = BinaryTranslator.new
+    actual = bt.translate("!@{$#%^&*()}")
+    expected = ""
+
+    assert_equal expected, actual
+  end
 end
