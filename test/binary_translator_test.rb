@@ -61,4 +61,12 @@ class BinaryTranslatorTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_it_handles_words_and_spaces
+    bt = BinaryTranslator.new
+    actual = bt.translate("Hello World!")
+    expected = "001000000101001100001100001111000000010111001111010010001100000100"
+
+    assert_equal expected, actual
+  end
 end
