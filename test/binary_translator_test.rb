@@ -29,4 +29,20 @@ class BinaryTranslatorTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_it_translates_capital_letters
+    bt = BinaryTranslator.new
+    actual = bt.translate("A")
+    expected = "000001"
+
+    assert_equal expected, actual
+  end
+
+  def test_it_translates_capital_words
+    bt = BinaryTranslator.new
+    actual = bt.translate("TURING")
+    expected = "010100010101010010001001001110000111"
+
+    assert_equal expected, actual
+  end
 end
