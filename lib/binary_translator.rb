@@ -1,6 +1,7 @@
 class BinaryTranslator
   def initialize
     @alpha_to_binary = {
+      " " => "000000",
       "a" => "000001",
       "b" => "000010",
       "c" => "000011",
