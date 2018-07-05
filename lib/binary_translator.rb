@@ -38,4 +38,12 @@ class BinaryTranslator
     end
     string_array.join
   end
+
+  def translate_to_text(string)
+    string_array = string.scan(/\d{1,6}/)
+    string_array.map! do |binary|
+      binary = @alpha_to_binary.key(binary)
+    end
+    string_array.join
+  end
 end
