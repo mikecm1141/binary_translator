@@ -31,6 +31,10 @@ class BinaryTranslator
   end
 
   def translate(string)
-    @alpha_to_binary[string]
+    string_array = string.chars
+    string_array.map! do |letter|
+      letter = @alpha_to_binary[letter]
+    end
+    string_array.join
   end
 end
