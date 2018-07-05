@@ -45,4 +45,12 @@ class BinaryTranslatorTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_it_translates_spaces_to_zeroes
+    bt = BinaryTranslator.new
+    actual = bt.translate(" ")
+    expected = "000000"
+
+    assert_equal expected, actual
+  end
 end
